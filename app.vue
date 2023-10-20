@@ -1,4 +1,4 @@
-<template v-if="vif">
+<template>
   <var-app-bar color="linear-gradient(90deg, rgba(72,176,221,1) 0%, rgba(0,208,161,1) 100%)">
     夏沫花火zzz🌙(Muska_Ami)
     <template #right>
@@ -72,6 +72,4 @@
 
 <script setup>
 import "@/asset/style.css"
-
-const vif = true
 </script>
