@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     ssr: {
       noExternal: ['@varlet/ui']
     },
+    csr: {
+      noExternal: ['@varlet/ui']
+    },
     plugins: [
       components({
         resolvers: [VarletUIResolver()]
