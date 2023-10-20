@@ -2,10 +2,10 @@
   <var-app-bar color="linear-gradient(90deg, rgba(72,176,221,1) 0%, rgba(0,208,161,1) 100%)">
     夏沫花火zzz🌙(Muska_Ami)
     <template #right>
-      <var-avatar :src=avatar size="small" />
+      <var-avatar src="https://blog.1l1.icu/images/avatar.jpg" size="small" />
     </template>
   </var-app-bar>
-  <var-card :src=avatar layout="row" title="夏沫花火zzz" subtitle="Muska_Ami"
+  <var-card src="https://blog.1l1.icu/images/avatar.jpg" layout="row" title="夏沫花火zzz" subtitle="Muska_Ami"
     description="I'm 夏沫花火zzz(Muska_Ami), a student in full day boarding school."></var-card>
 
   <var-row :gutter="[10, 10]">
@@ -72,6 +72,4 @@
 
 <script setup>
 import "@/asset/style.css"
-
-const avatar = "https://blog.1l1.icu/images/avatar.jpg"
 </script>
