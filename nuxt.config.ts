@@ -7,20 +7,5 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   experimental: { appManifest: false },
-  vite: {
-    ssr: {
-      noExternal: ['@varlet/ui']
-    },
-    csr: {
-      noExternal: ['@varlet/ui']
-    },
-    plugins: [
-      components({
-        resolvers: [VarletUIResolver()]
-      }),
-      autoImport({
-        resolvers: [VarletUIResolver({ autoImport: true })],
-      })
-    ]
-  }
+  modules: ['@varlet/nuxt']
 })
