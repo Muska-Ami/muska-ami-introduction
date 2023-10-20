@@ -6,6 +6,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  experimental: { appManifest: false },
   vite: {
     ssr: {
       noExternal: ['@varlet/ui']
