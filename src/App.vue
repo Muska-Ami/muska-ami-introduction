@@ -52,7 +52,7 @@ let year = new Date().getFullYear()
       </div>
       <template #footer>
         <span>Copyright © {{ year }} <a class="cr-a" href="https://blog.1l1.icu" target="_blank">夏沫花火zzz🌙</a>. All right reserved.</span>
-        <br><span><a href="https://icp.gov.moe/?keyword=20220860">萌ICP备20220860号</a></span>
+        <br><span><el-link href="https://icp.gov.moe/?keyword=20220860" target="_blank">萌ICP备20220860号</el-link></span>
       </template>
     </el-card>
   </main>
