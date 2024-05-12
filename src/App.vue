@@ -45,10 +45,17 @@ let year = new Date().getFullYear()
           <el-link href="https://x.com/Muska_Ami" target="_blank">
             <img alt="Static Badge" src="https://img.shields.io/badge/Twitter%2FX-skyblue?style=flat-square" />
           </el-link>
+          <el-link href="https://x.com/Muska_Ami" target="_blank">
+            <img alt="Static Badge" src="https://img.shields.io/badge/Twitter%2FX-skyblue?style=flat-square" />
+          </el-link>
+          <el-link href="https://afdian.net/a/HuaHuo-CN" target="_blank">
+            <img alt="Static Badge" src="https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-%20?style=flat-square&color=%23906AE4" />
+          </el-link>
         </p>
       </div>
       <template #footer>
         <span>Copyright © {{ year }} <a class="cr-a" href="https://blog.1l1.icu" target="_blank">夏沫花火zzz🌙</a>. All right reserved.</span>
+        <br><span><a href="https://icp.gov.moe/?keyword=20220860">萌ICP备20220860号</a></span>
       </template>
     </el-card>
   </main>
