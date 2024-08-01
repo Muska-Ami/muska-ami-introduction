@@ -45,6 +45,9 @@ let year = new Date().getFullYear()
           <el-link href="https://x.com/Muska_Ami" target="_blank">
             <img alt="Static Badge" src="https://img.shields.io/badge/Twitter%2FX-skyblue?style=flat-square" />
           </el-link>
+          <el-link href="https://gravatar.com/muskaami" target="_blank">
+            <img alt="Static Badge" src="https://img.shields.io/badge/Gravatar%2FX-blue?style=flat-square" />
+          </el-link>
         </p>
       </div>
       <template #footer>
