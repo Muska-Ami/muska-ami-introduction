@@ -12,7 +12,7 @@ let year = new Date().getFullYear()
         <p>
           <el-avatar :size="60" src="https://blog.muska.zip/images/avatar.jpg"></el-avatar>
           <img class="desc"
-            src="https://readme-typing-svg.herokuapp.com?font=Poppins&pause=1000&color=55CAF7&background=54DCFF00&center=%E7%9C%9F&vCenter=%E7%9C%9F&repeat=%E7%9C%9F&width=435&lines=Keep+doing%2C+keep+loving%E2%9D%A4.">
+            src="https://readme-typing-svg.demolab.com/?font=Poppins&pause=1000&color=55CAF7&background=54DCFF00&center=%E7%9C%9F&vCenter=%E7%9C%9F&repeat=%E7%9C%9F&width=435&lines=Keep+doing%2C+keep+loving%E2%9D%A4.">
         </p>
         <p class="bds">
         <h4>Languages that use</h4>
