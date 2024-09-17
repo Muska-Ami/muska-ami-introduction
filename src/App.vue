@@ -49,7 +49,7 @@ let year = new Date().getFullYear()
         <p class="bds">
         <h4>What I can do & can't</h4>
         我可以写前端！
-        <br>我也可以帮你看后端代码，但是请不要太为难我去看一些抽象的语言，暂时无法立即比如 Rust, Haskell 这样的语言哦~
+        <br>我也可以帮你看后端代码，但是请不要太为难我去看一些抽象的语言，暂时无法理解比如 Rust, Haskell 这样的语言哦~
         <br>还有更多我可以帮你的......
         <br>
         <img src="https://img.shields.io/badge/Java-%20?style=flat-square&logo=openjdk&logoColor=white&color=a57829"
