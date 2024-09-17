@@ -109,7 +109,7 @@ let year = new Date().getFullYear()
         </p>
       </div>
       <template #footer>
-        <span>Copyright © {{ year }} <a class="cr-a" href="https://blog.blog.muska.zip" target="_blank">夏沫花火zzz🌙</a>.
+        <span>Copyright © {{ year }} <a class="cr-a" href="https://blog.muska.zip" target="_blank">夏沫花火zzz🌙</a>.
           All right reserved.</span>
         <br><span><el-link href="https://icp.gov.moe/?keyword=20220860" target="_blank">萌ICP备20220860号</el-link></span>
         <br><span><el-link href="https://beian.miit.gov.cn" target="_blank">浙ICP备2024084850号-2</el-link></span> |
