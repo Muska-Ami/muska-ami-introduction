@@ -10,7 +10,7 @@ let year = new Date().getFullYear()
       </template>
       <div>
         <p>
-          <el-avatar :size="60" src="https://blog.muska.zip/images/avatar.jpg"></el-avatar>
+          <el-avatar :size="60" src="https://blog.1l1.icu/images/avatar.jpg"></el-avatar>
           <img class="desc"
             src="https://readme-typing-svg.demolab.com/?font=Poppins&pause=1000&color=55CAF7&background=54DCFF00&center=%E7%9C%9F&vCenter=%E7%9C%9F&repeat=%E7%9C%9F&width=435&lines=Keep+doing%2C+keep+loving%E2%9D%A4.">
         </p>
@@ -94,7 +94,7 @@ let year = new Date().getFullYear()
         </p>
         <p class="bds">
         <h4>Links</h4>
-        <el-link href="https://blog.muska.zip" target="_blank">
+        <el-link href="https://blog.1l1.icu" target="_blank">
           <img alt="Static Badge" src="https://img.shields.io/badge/Muska_Ami%E3%81%AEBLOG-blue?style=flat-square" />
         </el-link>
         <el-link href="https://github.com/Muska-Ami" target="_blank">
@@ -109,7 +109,7 @@ let year = new Date().getFullYear()
         </p>
       </div>
       <template #footer>
-        <span>Copyright © {{ year }} <a class="cr-a" href="https://blog.muska.zip" target="_blank">夏沫花火zzz🌙</a>.
+        <span>Copyright © {{ year }} <a class="cr-a" href="https://1l1.icu" target="_blank">夏沫花火zzz🌙</a>.
           All right reserved.</span>
         <br><span><el-link href="https://icp.gov.moe/?keyword=20220860" target="_blank">萌ICP备20220860号</el-link></span>
         <br><span><el-link href="https://beian.miit.gov.cn" target="_blank">浙ICP备2024084850号-2</el-link></span> |
