@@ -111,8 +111,14 @@ let year = new Date().getFullYear()
       <template #footer>
         <span>Copyright © {{ year }} <a class="cr-a" href="https://1l1.icu" target="_blank">夏沫花火zzz🌙</a>.
           All right reserved.</span>
-        <br><span><el-link href="https://icp.gov.moe/?keyword=20220860" target="_blank">萌ICP备20220860号</el-link></span>
-        <br><span><el-link href="https://beian.miit.gov.cn" target="_blank">浙ICP备2024084850号-2</el-link></span> |
+        <br>
+        <span>
+          <el-link href="https://icp.gov.moe/?keyword=20220860" target="_blank">萌ICP备20220860号</el-link>
+          |
+          <el-link href="https://icp.yuncheng.fun/id.php?keyword=23333333" target="_blank">团ICP备23333333号</el-link>
+          </span>
+        <br>
+        <span><el-link href="https://beian.miit.gov.cn" target="_blank">浙ICP备2024084850号-2</el-link></span>
         <span><el-link href="https://beian.mps.gov.cn/#/query/webSearch?code=33038102332482"
             target="_blank">浙公网安备33038102332482</el-link></span>
       </template>
