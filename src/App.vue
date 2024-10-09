@@ -25,7 +25,7 @@ let year = new Date().getFullYear()
         <p class="bds">
           <h4>DevOps & Stats</h4>
           <figure><embed src="https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/93c5700a-5367-4e24-8bed-6dcd8622d680.svg"></embed></figure>
-          <figure><embed src="https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/64009a7d-144f-47fb-a8b0-bc68d30a656b.svg"></embed></figure>
+          <figure><embed src="https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/e971222b-2bf7-442f-963c-7932275e3b90.svg"></embed></figure>
         </p>
         <p>
           一名来自中国大陆的高中猫猫，现居广西壮族自治区。
