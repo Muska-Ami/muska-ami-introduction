@@ -18,6 +18,7 @@
 .bds img {
     margin: 5px;
 }
+
 a {
     transition: 0.4s;
     color: #2fb1f3 !important;
@@ -34,4 +35,8 @@ a:hover {
     .el-card {
         max-width: 800px;
     }
+}
+
+* {
+    font-family: 'Micorsoft YaHei', sans-serif;
 }
