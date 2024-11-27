@@ -31,7 +31,8 @@ let year = new Date().getFullYear()
               src="https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/e971222b-2bf7-442f-963c-7932275e3b90.svg"></embed>
           </figure>
         </div>
-        <div>
+        <div class="bds">
+          <h4>About me</h4>
           一名来自中国大陆的高中猫猫，现居广西壮族自治区。
           <div>
             <span>务实</span>
