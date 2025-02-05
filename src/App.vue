@@ -128,7 +128,7 @@ let year = new Date().getFullYear()
         <span>
           <el-link href="https://icp.gov.moe/?keyword=20220860" target="_blank">萌ICP备20220860号</el-link>
           |
-          <el-link href="https://icp.yuncheng.fun/id.php?keyword=23333333" target="_blank">团ICP备23333333号</el-link>
+          <el-link href="https://icp.cutetuan.cn/id.php?keyword=23333333" target="_blank">团ICP备23333333号</el-link>
         </span>
         <br>
         <span>
