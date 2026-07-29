@@ -130,10 +130,10 @@ let year = new Date().getFullYear()
         </span>
         <br>
         <span>
-          <el-link href="https://beian.miit.gov.cn" target="_blank">浙ICP备2024084850号-2</el-link>
-          |
+          <el-link href="https://beian.miit.gov.cn" target="_blank">浙ICP备2024084850号-3</el-link>
+          <!-- |
           <el-link href="https://beian.mps.gov.cn/#/query/webSearch?code=33038102332482"
-            target="_blank">浙公网安备33038102332482</el-link>
+            target="_blank">浙公网安备33038102332482</el-link> -->
         </span>
       </template>
     </el-card>
