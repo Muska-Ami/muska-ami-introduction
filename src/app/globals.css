@@ -12,7 +12,7 @@
 .light {
   color-scheme: light;
 
-  --background: oklch(0.986 0.006 350);
+  --background: oklch(92.536% 0.04371 352.431);
   --surface: oklch(0.999 0.002 350);
   --surface-secondary: oklch(0.972 0.012 350);
   --surface-tertiary: oklch(0.955 0.02 350);
@@ -22,13 +22,13 @@
   --segment: oklch(0.999 0.002 350);
   --segment-foreground: oklch(0.28 0.03 350);
 
-  --muted: oklch(0.55 0.03 350);
+  --muted: oklch(41.171% 0.02245 351.991);
 
-  --accent: oklch(0.6 0.205 358);
+  --accent: oklch(63.003% 0.19666 356.879);
   --accent-foreground: var(--snow);
 
-  --border: oklch(0.906 0.026 350);
-  --separator: oklch(0.925 0.02 350);
+  --border: oklch(66.516% 0.04831 351.523);
+  --separator: oklch(68.794% 0.04012 350.176);
   --focus: var(--accent);
   --link: var(--accent);
 }

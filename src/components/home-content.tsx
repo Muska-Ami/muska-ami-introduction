@@ -140,18 +140,18 @@ function BadgeRow({ badges }: { badges: readonly { alt: string; src: string }[] 
 export function HomeContent({ year }: { year: number }) {
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-col gap-10 px-5 py-12 sm:px-6 sm:py-20">
-      <header className="grid grid-cols-[auto_1fr] items-center gap-x-5 gap-y-3">
+      <header className="grid grid-cols-[60px_minmax(0,1fr)] items-center gap-x-5 gap-y-3">
         <Avatar className="size-[60px] shrink-0 rounded-2xl">
           <Avatar.Image alt="头像" src={AVATAR_SRC} />
           <Avatar.Fallback className="rounded-2xl">Ami</Avatar.Fallback>
         </Avatar>
         <div className="flex min-w-0 flex-wrap items-center gap-x-4 gap-y-3">
-          <h1 className="min-w-0 flex-1 text-xl font-bold text-foreground sm:text-2xl">{TITLE}</h1>
+          <h1 className="min-w-40 flex-1 text-xl font-bold text-foreground sm:text-2xl">{TITLE}</h1>
           <ThemeSwitcher />
         </div>
         <img
           alt="Keep doing, keep loving❤."
-          className="h-auto w-full max-w-[435px]"
+          className="col-span-2 h-auto w-full max-w-[435px]"
           src={TYPING_SRC}
         />
       </header>
@@ -178,7 +178,7 @@ export function HomeContent({ year }: { year: number }) {
           ))}
         </div>
         <p>
-          喵喵喵？我很可愛い，请给我钱喵！
+          喵喵喵？我很可爱的，请给我钱喵！
           <br />
           才怪，本猫猫不会乱要钱哒qwq
         </p>
