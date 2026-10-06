@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "heroui-react": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": ["-y", "@heroui/react-mcp@latest"]
+    }
+  }
+}

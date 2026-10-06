@@ -1,35 +1,26 @@
-# intro
+# muska-ami-introduction
 
-This template should help get you started developing with Vue 3 in Vite.
+我的个人主页
 
-## Recommended IDE Setup
+## 技术栈
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- [Next.js](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [HeroUI v3](https://heroui.com/) + [Tailwind CSS v4](https://tailwindcss.com/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
+- [Bun](https://bun.sh/)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## 开发
 
 ```sh
-pnpm install
+bun install
+bun run dev
 ```
 
-### Compile and Hot-Reload for Development
+打开 http://localhost:3000 。
+
+## 构建
 
 ```sh
-pnpm dev
-```
-
-### Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
+bun run build
 ```

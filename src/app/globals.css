@@ -1,0 +1,63 @@
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss';
+@import '@heroui/styles';
+
+/*
+ * Pink theme. HeroUI resolves every component colour from these CSS variables,
+ * so overriding them here re-skins the whole library. These rules are unlayered,
+ * which means they win over the defaults declared inside `@layer base`.
+ */
+:root,
+.light {
+  color-scheme: light;
+
+  --background: oklch(0.986 0.006 350);
+  --surface: oklch(0.999 0.002 350);
+  --surface-secondary: oklch(0.972 0.012 350);
+  --surface-tertiary: oklch(0.955 0.02 350);
+  --overlay: oklch(0.999 0.002 350);
+
+  --default: oklch(0.948 0.016 350);
+  --segment: oklch(0.999 0.002 350);
+  --segment-foreground: oklch(0.28 0.03 350);
+
+  --muted: oklch(0.55 0.03 350);
+
+  --accent: oklch(0.6 0.205 358);
+  --accent-foreground: var(--snow);
+
+  --border: oklch(0.906 0.026 350);
+  --separator: oklch(0.925 0.02 350);
+  --focus: var(--accent);
+  --link: var(--accent);
+}
+
+.dark {
+  color-scheme: dark;
+
+  --background: oklch(0.152 0.014 350);
+  --surface: oklch(0.2 0.017 350);
+  --surface-secondary: oklch(0.237 0.019 350);
+  --surface-tertiary: oklch(0.268 0.021 350);
+  --overlay: oklch(0.22 0.018 350);
+
+  --default: oklch(0.28 0.02 350);
+  --segment: oklch(0.32 0.022 350);
+  --segment-foreground: var(--snow);
+
+  --muted: oklch(0.72 0.025 350);
+
+  --accent: oklch(0.78 0.15 355);
+  --accent-foreground: var(--eclipse);
+
+  --border: oklch(0.3 0.028 350);
+  --separator: oklch(0.28 0.024 350);
+  --focus: var(--accent);
+  --link: var(--accent);
+}
+
+body {
+  font-family:
+    'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', ui-sans-serif, system-ui, sans-serif;
+}

@@ -1,6 +1,6 @@
 {
   "assets": {
-    "directory": "./dist",
+    "directory": "./out",
     "notFoundStrategy": "singlePageApplication"
   }
 }
