@@ -103,41 +103,46 @@ const PROFILE_BADGES = [
   }
 ]
 
-interface ThemeImage {
-  alt: string
-  dark: string
-  light: string
-}
-
 /*
- * Every chart below is published in a light and a dark flavour, and each is
- * drawn with its own opaque background. Exactly one is rendered, picked by the
- * `dark` class, so a chart never sits on a backdrop it was not designed for.
- * The hidden copy is `display: none`, which keeps it out of the a11y tree and
- * leaves only the visible chart's `alt` announced.
+ * WakaTime hands these charts out as <figure><embed></figure>, so that is how
+ * they are embedded. Each chart is published in a light and a dark flavour and
+ * both are drawn with their own opaque background, so exactly one is shown,
+ * picked by the `dark` class; the other is `display: none`, which keeps it out
+ * of the a11y tree. The label names the figure, standing in for the `alt` an
+ * <img> would have carried.
  */
-const WAKATIME_CHARTS: readonly ThemeImage[] = [
+const WAKATIME_CHARTS = [
   {
-    alt: 'WakaTime 语言统计图表',
-    dark: 'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/8060cf95-a9a8-4d28-a6fc-b9a6cdaebb7c.svg',
+    label: 'WakaTime 语言统计图表',
+    dark: 'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/feacfda7-a7dd-482c-b0a0-651f65c2c502.svg',
     light:
-      'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/a838fbe2-d1d9-4add-9891-eba26cada0ab.svg'
+      'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/74dacc44-971d-426f-92ee-aae23d6e8e73.svg'
   },
   {
-    alt: 'WakaTime 编辑器统计图表',
-    dark: 'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/b4d620cc-b149-412c-b805-6cf37daa15bd.svg',
+    label: 'WakaTime 编辑器统计图表',
+    dark: 'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/c8cdd595-f175-4722-8b98-96b29dac8cf7.svg',
     light:
-      'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/87c26936-403c-4219-83de-b62aff6ec2ae.svg'
+      'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/dbbf1723-caae-4d73-9a13-c30235ec2c47.svg'
   }
-]
+] as const
 
-const TOKENS_CHARTS: readonly ThemeImage[] = [
+/*
+ * tokens.ci serves a light and a dark SVG. Exactly one is shown, picked by the
+ * `dark` class, so the chart always matches the active theme instead of sitting
+ * on a background it was not designed for.
+ */
+const TOKENS_CHARTS = [
   {
-    alt: 'Tokens 统计图表',
-    dark: 'https://tokens.ci/api/embed/Muska-Ami/svg?view=3d',
-    light: 'https://tokens.ci/api/embed/Muska-Ami/svg?view=3d&theme=light'
+    alt: 'Tokens 统计图表（亮色）',
+    className: 'dark:hidden',
+    src: 'https://tokens.ci/api/embed/Muska-Ami/svg?view=3d&theme=light'
+  },
+  {
+    alt: 'Tokens 统计图表（暗色）',
+    className: 'hidden dark:block',
+    src: 'https://tokens.ci/api/embed/Muska-Ami/svg?view=3d'
   }
-]
+] as const
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -168,22 +173,26 @@ function BadgeRow({ badges }: { badges: readonly { alt: string; src: string }[] 
   )
 }
 
-function ThemeChartPair({ chart }: { chart: ThemeImage }) {
+/*
+ * <embed> is a replaced element with no intrinsic size, so unlike <img> it does
+ * not scale to the artwork by itself; the 4:3 box below comes from the charts'
+ * own 800x600 viewBox and gives it the shape to fill.
+ */
+function WakaTimeChart({ chart }: { chart: (typeof WAKATIME_CHARTS)[number] }) {
   return (
-    <>
-      <img
-        alt={chart.alt}
-        className="w-full rounded-2xl dark:hidden"
-        loading="lazy"
-        src={chart.light}
-      />
-      <img
-        alt={chart.alt}
-        className="hidden w-full rounded-2xl dark:block"
-        loading="lazy"
-        src={chart.dark}
-      />
-    </>
+    <figure className="flex flex-col gap-2">
+      {(['light', 'dark'] as const).map((scheme) => (
+        <embed
+          key={scheme}
+          className={`aspect-[4/3] w-full rounded-2xl ${
+            scheme === 'light' ? 'dark:hidden' : 'hidden dark:block'
+          }`}
+          src={chart[scheme]}
+          type="image/svg+xml"
+        />
+      ))}
+      <figcaption className="sr-only">{chart.label}</figcaption>
+    </figure>
   )
 }
 
@@ -333,10 +342,16 @@ export function HomeContent({ year }: { year: number }) {
 
       <Section title="DevOps & Stats">
         {WAKATIME_CHARTS.map((chart) => (
-          <ThemeChartPair key={chart.light} chart={chart} />
+          <WakaTimeChart key={chart.light} chart={chart} />
         ))}
         {TOKENS_CHARTS.map((chart) => (
-          <ThemeChartPair key={chart.light} chart={chart} />
+          <img
+            key={chart.src}
+            alt={chart.alt}
+            className={`w-full rounded-2xl ${chart.className}`}
+            loading="lazy"
+            src={chart.src}
+          />
         ))}
       </Section>
 
