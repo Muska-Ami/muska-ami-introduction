@@ -61,3 +61,11 @@ body {
   font-family:
     'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', ui-sans-serif, system-ui, sans-serif;
 }
+
+/*
+ * Tailwind's built-in `dark:` variant also fires on `prefers-color-scheme`, so
+ * it would show dark artwork to someone using a dark OS with the theme switcher
+ * set to light. HeroUI keeps the `.dark` class in sync with that switcher, so
+ * scope `dark:` to the class only.
+ */
+@custom-variant dark (&:is(.dark, .dark *));

@@ -103,9 +103,40 @@ const PROFILE_BADGES = [
   }
 ]
 
-const WAKATIME_CHARTS = [
-  'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/93c5700a-5367-4e24-8bed-6dcd8622d680.svg',
-  'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/e971222b-2bf7-442f-963c-7932275e3b90.svg'
+interface ThemeImage {
+  alt: string
+  dark: string
+  light: string
+}
+
+/*
+ * Every chart below is published in a light and a dark flavour, and each is
+ * drawn with its own opaque background. Exactly one is rendered, picked by the
+ * `dark` class, so a chart never sits on a backdrop it was not designed for.
+ * The hidden copy is `display: none`, which keeps it out of the a11y tree and
+ * leaves only the visible chart's `alt` announced.
+ */
+const WAKATIME_CHARTS: readonly ThemeImage[] = [
+  {
+    alt: 'WakaTime 语言统计图表',
+    dark: 'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/8060cf95-a9a8-4d28-a6fc-b9a6cdaebb7c.svg',
+    light:
+      'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/a838fbe2-d1d9-4add-9891-eba26cada0ab.svg'
+  },
+  {
+    alt: 'WakaTime 编辑器统计图表',
+    dark: 'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/b4d620cc-b149-412c-b805-6cf37daa15bd.svg',
+    light:
+      'https://wakatime.com/share/@018c1993-fbe1-48fd-9551-91e287631e43/87c26936-403c-4219-83de-b62aff6ec2ae.svg'
+  }
+]
+
+const TOKENS_CHARTS: readonly ThemeImage[] = [
+  {
+    alt: 'Tokens 统计图表',
+    dark: 'https://tokens.ci/api/embed/Muska-Ami/svg?view=3d',
+    light: 'https://tokens.ci/api/embed/Muska-Ami/svg?view=3d&theme=light'
+  }
 ]
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -134,6 +165,25 @@ function BadgeRow({ badges }: { badges: readonly { alt: string; src: string }[] 
         />
       ))}
     </div>
+  )
+}
+
+function ThemeChartPair({ chart }: { chart: ThemeImage }) {
+  return (
+    <>
+      <img
+        alt={chart.alt}
+        className="w-full rounded-2xl dark:hidden"
+        loading="lazy"
+        src={chart.light}
+      />
+      <img
+        alt={chart.alt}
+        className="hidden w-full rounded-2xl dark:block"
+        loading="lazy"
+        src={chart.dark}
+      />
+    </>
   )
 }
 
@@ -282,15 +332,12 @@ export function HomeContent({ year }: { year: number }) {
       </Section>
 
       <Section title="DevOps & Stats">
-        {/* The WakaTime share charts are dark-styled SVGs, so they keep a fixed dark backdrop. */}
-        <div
-          className="flex flex-col gap-4 rounded-2xl p-3"
-          style={{ backgroundColor: 'var(--eclipse)' }}
-        >
-          {WAKATIME_CHARTS.map((src) => (
-            <img key={src} alt="WakaTime 统计图表" className="w-full" loading="lazy" src={src} />
-          ))}
-        </div>
+        {WAKATIME_CHARTS.map((chart) => (
+          <ThemeChartPair key={chart.light} chart={chart} />
+        ))}
+        {TOKENS_CHARTS.map((chart) => (
+          <ThemeChartPair key={chart.light} chart={chart} />
+        ))}
       </Section>
 
       <Separator />
